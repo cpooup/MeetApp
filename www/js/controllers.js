@@ -4,13 +4,13 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
         disableBack: true
     });
     $scope.login = function () {
-        $cordovaOauth.facebook("1611671822423925", ["email", "read_stream", "user_location", "user_relationships","public_profile","user_friends"]).then(function (result) {
+    /*    $cordovaOauth.facebook("1611671822423925", ["email", "read_stream", "user_location", "user_relationships","public_profile","user_friends"]).then(function (result) {
             $localStorage.accessToken = result.access_token;
            $location.path("/LookForInvites");
         }, function (error) {
             alert("There was a problem signing in!  See the console for logs");
             console.log(error);
-        });
+        });*/
         $location.path("/EditProfile");
     };
 
@@ -38,43 +38,67 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
         $location.path("/EditPreferences");
     };
 
-    $scope.getPhoto = function () {
-        Camera.getPicture().then(function (imageURI) {
-            console.log(imageURI);
-        }, function (err) {
-            console.err(err);
-        });
-    };
+    $scope.getPhoto = function (source) {
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+                    destinationType: navigator.camera.DestinationType.DATA_URI,
+                    sourceType: source });
+        /*Camera.getPicture(navigator.camera.PictureSourceType.PHOTOLIBRARY).then(function (imageURI) {
+           console.log(imageURI);*/
+             };
 
-//  $scope.takePic = function() {
-//        var options =   {
-//            quality: 50,
-//            destinationType: Camera.DestinationType.FILE_URI,
-//            sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
-//            encodingType: 0     // 0=JPG 1=PNG
-//        }
-//        navigator.camera.getPicture(onSuccess,onFail,options);
-//    };
-//    var onSuccess = function(FILE_URI) {
-//        console.log(FILE_URI);
-//        $scope.picData = FILE_URI;
-//        $scope.$apply();
-//    };
-//    var onFail = function(e) {
-//        console.log("On fail " + e);
-//    }
-//    $scope.send = function() {   
-//        var myImg = $scope.picData;
-//        var options = new FileUploadOptions();
-//        options.fileKey="post";
-//        options.chunkedMode = false;
-//        var params = {};
-//        params.user_token = localStorage.getItem('auth_token');
-//        params.user_email = localStorage.getItem('email');
-//        options.params = params;
-//        var ft = new FileTransfer();
-//        ft.upload(myImg, encodeURI("https://example.com/posts/"), onUploadSuccess, onUploadFail, options);
-//    };
+/* Camera */
+   /* $scope.takePic = function() {
+       var options =   {
+            quality: 50,
+            destinationType: Camera.DestinationType.FILE_URI,
+            sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+            encodingType: 0,     // 0=JPG 1=PNG
+            allowEdit: true
+        }
+       navigator.camera.getPicture(onSuccess,onFail,options);
+    };*/
+
+
+/* Camera */
+    $scope.takePic = function() {
+        var options = {
+                   quality : 75,
+                   destinationType : Camera.DestinationType.DATA_URL,
+                   sourceType : Camera.PictureSourceType.CAMERA,
+                   allowEdit : true,
+                   encodingType: Camera.EncodingType.JPEG,
+                   popoverOptions: CameraPopoverOptions,
+                   targetWidth: 500,
+                   targetHeight: 500,
+                   saveToPhotoAlbum: false
+                   };
+       navigator.camera.getPicture(onSuccess,onFail,options);
+    }
+        var onSuccess = function(imageURI) {
+        /*console.log(FILE_URI);
+        $scope.picData = FILE_URI;
+        $scope.$apply();*/
+        var FileIO= document.getElementById('FileIO');
+                 FileIO.style.display='block';
+                 FileIO.src=imageURI;
+    };
+        var onFail = function(e) {
+        console.log("On fail " + e);
+    }
+
+
+    $scope.send = function() {
+        var myImg = $scope.picData;
+        var options = new FileUploadOptions();
+        options.fileKey="post";
+        options.chunkedMode = false;
+        var params = {};
+        params.user_token = localStorage.getItem('auth_token');
+        params.user_email = localStorage.getItem('email');
+        options.params = params;
+        var ft = new FileTransfer();
+        ft.upload(myImg, encodeURI("https://example.com/posts/"), onUploadSuccess, onUploadFail, options);
+    };
 
 });
 
