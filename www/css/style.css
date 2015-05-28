@@ -669,3 +669,6 @@ a.item.item-icon-left.item-icon-right.notification{
 .InviteFrom-page .right .item-checkbox {
     min-width: 120px;
 }
+.InviteFrom-page input {
+    text-align: center;
+}

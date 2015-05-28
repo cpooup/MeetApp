@@ -1,23 +1,23 @@
 //Login Page
-MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
     $scope.login = function () {
-    /*    $cordovaOauth.facebook("1611671822423925", ["email", "read_stream", "user_location", "user_relationships","public_profile","user_friends"]).then(function (result) {
-            $localStorage.accessToken = result.access_token;
-           $location.path("/LookForInvites");
-        }, function (error) {
-            alert("There was a problem signing in!  See the console for logs");
-            console.log(error);
-        });*/
+        /*    $cordovaOauth.facebook("1611671822423925", ["email", "read_stream", "user_location", "user_relationships","public_profile","user_friends"]).then(function (result) {
+         $localStorage.accessToken = result.access_token;
+         $location.path("/LookForInvites");
+         }, function (error) {
+         alert("There was a problem signing in!  See the console for logs");
+         console.log(error);
+         });*/
         $location.path("/EditProfile");
     };
 
 });
 
 //Edit Profile Page
-MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
@@ -30,7 +30,7 @@ MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $lo
 });
 
 //Upload Images Page
-MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $localStorage, $location, Camera,$ionicViewService) {
+MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $localStorage, $location, Camera, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
@@ -39,54 +39,54 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
     };
 
     $scope.getPhoto = function () {
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-                    destinationType: navigator.camera.DestinationType.DATA_URI,
-                    sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY });
+        navigator.camera.getPicture(onSuccess, onFail, {quality: 50,
+            destinationType: navigator.camera.DestinationType.DATA_URI,
+            sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY});
         /*Camera.getPicture(navigator.camera.PictureSourceType.PHOTOLIBRARY).then(function (imageURI) {
-           console.log(imageURI);*/
-             }
+         console.log(imageURI);*/
+    }
 
-/* Camera */
-   /* $scope.takePic = function() {
-       var options =   {
-            quality: 50,
-            destinationType: Camera.DestinationType.FILE_URI,
-            sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
-            encodingType: 0,     // 0=JPG 1=PNG
-            allowEdit: true
-        }
-       navigator.camera.getPicture(onSuccess,onFail,options);
-    };*/
+    /* Camera */
+    /* $scope.takePic = function() {
+     var options =   {
+     quality: 50,
+     destinationType: Camera.DestinationType.FILE_URI,
+     sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+     encodingType: 0,     // 0=JPG 1=PNG
+     allowEdit: true
+     }
+     navigator.camera.getPicture(onSuccess,onFail,options);
+     };*/
 
 
-/* Camera */
-    $scope.takePic = function() {
-        navigator.camera.getPicture(onSuccess,onFail,{
-                   quality : 75,
-                   destinationType : Camera.DestinationType.DATA_URL,
-                   allowEdit : true,
-                   encodingType: Camera.EncodingType.JPEG,
-                   saveToPhotoAlbum: false
-                   });
+    /* Camera */
+    $scope.takePic = function () {
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 75,
+            destinationType: Camera.DestinationType.DATA_URL,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            saveToPhotoAlbum: false
+        });
 
     }
-        var onSuccess = function(imageURI) {
+    var onSuccess = function (imageURI) {
         /*console.log(FILE_URI);
-        $scope.picData = FILE_URI;
-        $scope.$apply();*/
-        var FileIO= document.getElementById('FileIO');
-                 FileIO.src=imageURI;
-                 $scope.$apply();
+         $scope.picData = FILE_URI;
+         $scope.$apply();*/
+        var FileIO = document.getElementById('FileIO');
+        FileIO.src = imageURI;
+        $scope.$apply();
     }
-        var onFail = function(e) {
+    var onFail = function (e) {
         console.log("On fail " + e);
     }
 
 
-    $scope.send = function() {
+    $scope.send = function () {
         var myImg = $scope.picData;
         var options = new FileUploadOptions();
-        options.fileKey="post";
+        options.fileKey = "post";
         options.chunkedMode = false;
         var params = {};
         params.user_token = localStorage.getItem('auth_token');
@@ -100,7 +100,7 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
 
 
 //Edit Preferences Page
-MeetApp.controller("EditPreferencesController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("EditPreferencesController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
@@ -108,34 +108,34 @@ MeetApp.controller("EditPreferencesController", function ($scope, $cordovaOauth,
         $location.path("/app/Home");
     };
     $scope.isCheckedMen = {
-       value : true
+        value: true
     };
     $scope.isCheckedWoman = {
-       value : true
+        value: true
     };
     $scope.isCheckedAll = {
-       value : true
+        value: true
     };
     $scope.isCheckedParty = {
-       value : false
+        value: false
     };
     $scope.km = {
-       rangeMin:1,
-       rangeMax:50,
-       min:1,
-       max:30,
-       center:30
+        rangeMin: 1,
+        rangeMax: 50,
+        min: 1,
+        max: 30,
+        center: 30
     };
     $scope.aged = {
-       rangeMin:18,
-       rangeMax:50,
-       min:20,
-       max:30
+        rangeMin: 18,
+        rangeMax: 50,
+        min: 20,
+        max: 30
     };
 
 });
 
-MeetApp.controller("ProfileController", function ($scope, $http, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("ProfileController", function ($scope, $http, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
@@ -155,7 +155,7 @@ MeetApp.controller("ProfileController", function ($scope, $http, $localStorage, 
 
 });
 
-MeetApp.controller("FeedController", function ($scope, $http, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("FeedController", function ($scope, $http, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
@@ -178,14 +178,14 @@ MeetApp.controller("FeedController", function ($scope, $http, $localStorage, $lo
 
 });
 
-MeetApp.controller('AppCtrl', function($scope, $ionicModal, $timeout,$ionicViewService) {
-  $ionicViewService.nextViewOptions({
+MeetApp.controller('AppCtrl', function ($scope, $ionicModal, $timeout, $ionicViewService) {
+    $ionicViewService.nextViewOptions({
         disableBack: true
     });
 });
 
 //Home Page
-MeetApp.controller("HomeController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("HomeController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
@@ -199,7 +199,7 @@ MeetApp.controller("HomeController", function ($scope, $cordovaOauth, $localStor
 });
 
 //Take A Picture Page
-MeetApp.controller("TakeAPictureController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("TakeAPictureController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
@@ -209,11 +209,10 @@ MeetApp.controller("TakeAPictureController", function ($scope, $cordovaOauth, $l
 });
 
 //Look For Invites Page
-MeetApp.controller("LookForInvitesController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("LookForInvitesController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
-
     $scope.InviteYes = function () {
         $location.path("/app/TakeAPicture");
     };
@@ -226,10 +225,19 @@ MeetApp.controller("LookForInvitesController", function ($scope, $cordovaOauth, 
 });
 
 //Invite From Page
-MeetApp.controller("InviteFromController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("InviteFromController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
+    $scope.isCheckedShare = {
+       value : true
+    };
+    $scope.isCheckedAll = {
+       value : true
+    };
+    $scope.isCheckedParty = {
+       value : false
+    };
     $scope.RetakePhoto = function () {
         $location.path("/app/TakeAPicture");
     };
@@ -254,5 +262,5 @@ MeetApp.factory('Camera', ['$q', function ($q) {
                 return q.promise;
             }
         }
-}]);
+    }]);
 
