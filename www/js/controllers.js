@@ -53,31 +53,17 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
         navigator.camera.getPicture(onSuccess, onFail, {quality: 50,
             destinationType: navigator.camera.DestinationType.DATA_URI,
             sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY});
-        /*Camera.getPicture(navigator.camera.PictureSourceType.PHOTOLIBRARY).then(function (imageURI) {
-         console.log(imageURI);*/
-    }
 
-    /* Camera */
-    /* $scope.takePic = function() {
-     var options =   {
-     quality: 50,
-     destinationType: Camera.DestinationType.FILE_URI,
-     sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
-     encodingType: 0,     // 0=JPG 1=PNG
-     allowEdit: true
-     }
-     navigator.camera.getPicture(onSuccess,onFail,options);
-     };*/
+    }
 
 
     /* Camera */
     $scope.takePic = function () {
         navigator.camera.getPicture(onSuccess, onFail, {
             quality: 75,
-            destinationType: Camera.DestinationType.DATA_URL,
+            destinationType: navigator.camera.DestinationType.DATA_URI,
             allowEdit: true,
-            encodingType: Camera.EncodingType.JPEG,
-            saveToPhotoAlbum: false
+
         });
 
     }
