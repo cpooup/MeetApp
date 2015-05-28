@@ -255,7 +255,7 @@ MeetApp.controller("InviteFromController", function ($scope, $cordovaOauth, $loc
         $location.path("/app/TakeAPicture");
     };
     $scope.CreateInvite = function () {
-        $location.path("/EditPreferences");
+        $location.path("/app/Home");
     };
 });
 
