@@ -610,7 +610,10 @@ a.item.item-icon-left.item-icon-right.notification{
 }
 
 .LookForInvites-page .box .LookForInvites-foot .col{  padding: 3px;}
-
+.LookForInvites-foot .foot-nav img.submit-small {
+  width: 45vw;
+  height: 8vw;
+}
 
 /*Invite Form*/
 .InviteFrom-page .scroll-content{
@@ -697,4 +700,11 @@ a.item.item-icon-left.item-icon-right.notification{
 }
 .InviteFrom-page .share .item-content.disable-pointer-events {
   padding-top: 6px;
+}
+.InviteFrom-foot .foot-nav{
+    text-align: center !important;
+}
+.InviteFrom-foot .foot-nav img.submit-small {
+  width: 45vw;
+  height: 8vw;
 }

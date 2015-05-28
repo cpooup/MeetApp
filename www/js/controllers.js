@@ -246,10 +246,10 @@ MeetApp.controller("InviteFromController", function ($scope, $cordovaOauth, $loc
        value : true
     };
     $scope.isCheckedAll = {
-       value : true
+       value : false
     };
     $scope.isCheckedParty = {
-       value : false
+       value : true
     };
     $scope.RetakePhoto = function () {
         $location.path("/app/TakeAPicture");

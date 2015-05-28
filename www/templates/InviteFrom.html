@@ -75,8 +75,11 @@
         </div>
     </ion-content>
 </ion-view>
-<div class="edit-preferences-foot bar bar-footer bar-balanced ">
-    <div class="foot-nav center">
-        <img ng-click="Submit()" src="img/button/submit.png" class="submit-small"/>
+<div ng-controller="InviteFromController" class="InviteFrom-foot bar bar-footer bar-balanced ">
+    <div class="foot-nav left">
+        <img ng-click="RetakePhoto()" src="img/button/retake-photo.png" class="submit-small"/>
+    </div>
+    <div class="foot-nav right">
+        <img ng-click="CreateInvite()" src="img/button/create-invite.png" class="submit-small"/>
     </div>
 </div>
