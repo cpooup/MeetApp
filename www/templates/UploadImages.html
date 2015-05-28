@@ -1,0 +1,40 @@
+<div class="upload-images-head bar bar-header bar-light">
+    <h1 class="title">Upload images</h1>
+</div>
+<ion-view ng-controller="UploadImagesController" class="upload-images-page">
+    <ion-content>
+        <div class="content has-header padding-vertical padding-horizontal">
+           
+            <div class="row row-center">
+                <div class="col">
+                    <img src="/img/album.png" class="icon-small"/>
+                </div>
+            </div>
+             <div class="row row-center">
+                <div class="col">
+                    <img ng-click="takePic()" src="/img/button/choose-album.png" class="button-small"/>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <p>or</p>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <img src="/img/camera.png" class="icon-small"/>
+                </div>
+            </div>
+             <div class="row row-center">
+                <div class="col">
+                    <img ng-click="takePic()" src="/img/button/take-photo.png" class="button-small"/>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<div class="upload-images-foot bar bar-footer bar-balanced ">
+    <div class="foot-nav">
+        <img ng-click="nextEditPreferences()" src="/img/button/next.png" class="next-small"/>
+    </div>
+</div>

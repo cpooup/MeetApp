@@ -1,0 +1,46 @@
+<div class="edit-profile-head bar bar-header bar-light">
+    <h1 class="title">Edit Profile</h1>
+</div>
+<ion-view ng-controller="EditProfileController" class="edit-profile-page">
+    <ion-content>
+        <div class="content has-header padding-vertical padding-horizontal">
+            <div class="row row-center">
+                <div class="col item item-image thumbnail-big">
+                    <img src="/ref/-Chris-Hemsworth-chris-hemsworth-32422378-400-600.png" class="thumbnail"/>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col item item-image thumbnail-small">
+                    <img src="/ref/17d59f1e-bbf4-424a-92c2-bc602873b369.jpg" class="thumbnail middle"/>
+                </div>
+                <div class="col item item-image thumbnail-small">
+                    <img src="/ref/chris-hemsworth-8-768.jpg" class="thumbnail middle"/>
+                </div>
+                <div class="col item item-image thumbnail-small">
+                    <img src="/ref/chris-hemsworth-short-hair-01132015-06-675x900.jpg" class="thumbnail middle"/>
+                </div>
+                <div class="col item item-image thumbnail-small">
+                    <img ng-click="nextUploadImages()" src="/img/plus.png" class="plus middle"/>
+                </div>
+
+            </div>
+            <div class="about-title row row-center">
+                <div class="col">
+                    <h2>About You</h2>
+                </div>
+            </div>
+        </div>
+        <div class="about content has-header padding-vertical padding-horizontal">
+            <div class="row row-center box-content">
+                <div class="col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis purus, hendrerit vel auctor ut, aliquet ut ipsum. hendrerit vel auctor ut</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<div class="edit-profile-foot bar bar-footer bar-balanced ">
+    <div class="foot-nav">
+        <img ng-click="nextEditPreferences()" src="/img/button/next.png" class="next-small"/>
+    </div>
+</div>

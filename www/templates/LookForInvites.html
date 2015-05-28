@@ -1,0 +1,117 @@
+<ion-view view-title="GoSpotting"  class="LookForInvites-page">
+    <ion-content ng-controller="LookForInvitesController">
+        <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+            <ion-slide>
+                <div class="box">
+                    <div class="top-left">
+                        <div class="interest">
+                            <img class="icon-interest" src="img/interest.png" /><span>20</span>
+                        </div>
+                        <div class="friend">
+                            <img class="icon-friend" src="img/friend.png" /><span>10</span>
+                        </div>
+                    </div>
+                    <div class="top-right">
+                        <div class="expires"><span>Expires in:</span></div>
+                        <div class="time"><button class="button button-light">08:30</button></div>
+                    </div>
+                    <img src="ref/pretty-girls-with-brown-hair-and-hazel-eyes-tumblr-ezkta84n.jpg" class="middle" />
+                    <div class="bottom">
+                        <div class="content">
+                            <h1>Who wants to buy us drinks?</h1>
+                        </div>
+                    </div>
+                    <div class="LookForInvites-foot bar bar-footer bar-balanced ">
+                        <div class="foot-nav center">
+                            <div class="row row-center">
+                                <div class="col">
+                                    <img ng-click="CreateInvite()" src="/img/yes.png" class="look-icon-small"/>
+                                </div>
+                                <div class="col">
+                                    <img ng-click="CreateInvite()" src="/img/info.png" class="look-icon-small"/>
+                                </div>
+                                <div class="col">
+                                    <img ng-click="CreateInvite()" src="/img/no.png" class="look-icon-small"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <div class="top-left">
+                        <div class="interest">
+                            <img class="icon-interest" src="img/interest.png" /><span>20</span>
+                        </div>
+                        <div class="friend">
+                            <img class="icon-friend" src="img/friend.png" /><span>10</span>
+                        </div>
+                    </div>
+                    <div class="top-right">
+                        <div class="expires"><span>Expires in:</span></div>
+                        <div class="time"><button class="button button-light">08:30</button></div>
+                    </div>
+                    <img src="ref/rs_634x1024-150303181016-634-chris-hemsworth-shirtless.jw.3315.jpg" class="middle" />
+                    <div class="bottom">
+                        <div class="content">
+                            <h1>Who wants to buy us drinks?</h1>
+                        </div>
+                    </div>
+                    <div class="LookForInvites-foot bar bar-footer bar-balanced ">
+                        <div class="foot-nav center">
+                            <div class="row row-center">
+                                <div class="col">
+                                    <img ng-click="CreateInvite()" src="/img/yes.png" class="look-icon-small"/>
+                                </div>
+                                <div class="col">
+                                    <img ng-click="CreateInvite()" src="/img/info.png" class="look-icon-small"/>
+                                </div>
+                                <div class="col">
+                                    <img ng-click="CreateInvite()" src="/img/no.png" class="look-icon-small"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <div class="top-left">
+                        <div class="interest">
+                            <img class="icon-interest" src="img/interest.png" /><span>20</span>
+                        </div>
+                        <div class="friend">
+                            <img class="icon-friend" src="img/friend.png" /><span>10</span>
+                        </div>
+                    </div>
+                    <div class="top-right">
+                        <div class="expires"><span>Expires in:</span></div>
+                        <div class="time"><button class="button button-light">08:30</button></div>
+                    </div>
+                    <img src="ref/chris-hemsworth-19.jpg" class="middle" />
+                    <div class="bottom">
+                        <div class="content">
+                            <h1>Who wants to buy us drinks?</h1>
+                        </div>
+                    </div>
+                    <div class="LookForInvites-foot bar bar-footer bar-balanced ">
+                        <div class="foot-nav center">
+                            <div class="row row-center">
+                                <div class="col">
+                                    <img ng-click="InviteYes()" src="/img/yes.png" class="look-icon-small"/>
+                                </div>
+                                <div class="col">
+                                    <img ng-click="InviteInfo()" src="/img/info.png" class="look-icon-small"/>
+                                </div>
+                                <div class="col">
+                                    <img ng-click="InviteNo()" src="/img/no.png" class="look-icon-small"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

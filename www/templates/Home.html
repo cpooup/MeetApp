@@ -1,0 +1,47 @@
+<ion-view view-title="GoSpotting"  class="home-page">
+    <ion-content ng-controller="HomeController">
+        <div class="content has-header padding-vertical padding-horizontal">
+            <div class="row row-center">
+                <div class="col">
+                    <h1>Look <br>For <br>Invites</h1>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <ul class="list">
+                    <li class="item item-checkbox">
+                       <label class="checkbox">
+                         <input type="checkbox" checked="">
+                       </label>
+                       Party invite
+                    </li>
+                    <li class="item item-checkbox">
+                       <label class="checkbox">
+                         <input type="checkbox" checked="">
+                       </label>
+                       All invite
+                    </li>
+                    <li class="item item-checkbox">
+                       <label class="checkbox">
+                         <input type="checkbox" checked="">
+                       </label>
+                       Promotions
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                     <div class="content-nav center">
+                        <img ng-click="StartFlipping()" src="/img/button/start-flipping.jpg" class="submit-small"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<div ng-controller="HomeController" class="home-foot bar bar-footer bar-balanced ">
+    <div class="foot-nav center">
+        <img ng-click="CreateInvite()" src="/img/button/create-invite.png" class="submit-small"/>
+    </div>
+</div>

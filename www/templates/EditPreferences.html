@@ -1,0 +1,91 @@
+<div class="edit-preferences-head bar bar-header bar-light">
+    <h1 class="title">Edit Preferences</h1>
+</div>
+<ion-view ng-controller="EditPreferencesController" class="edit-preferences-page">
+    <ion-content>
+        <div class="content has-header padding-vertical padding-horizontal">
+            <div class="row row-center">
+                <div class="col">
+                    <h3>Show party invites from</h3>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col left">
+                    <ion-checkbox ng-model="isCheckedMen.value">Men</ion-checkbox>
+                </div>
+                <div class="col right">
+                    <ion-checkbox ng-model="isCheckedWoman.value">Woman</ion-checkbox>
+                </div>
+            </div>
+            <hr>
+            <div class="row row-center">
+                <div class="col">
+                    <h3>Category</h3>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col left">
+                    <ion-checkbox ng-model="isCheckedAll.value">All</ion-checkbox>
+                </div>
+                <div class="col right">
+                    <ion-checkbox ng-model="isCheckedParty.value">Party</ion-checkbox>
+                </div>
+            </div>
+             <hr>
+            <div class="row row-center">
+                <div class="col">
+                    <h3>Show invites within how many km.</h3>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col input-km">
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <input type="text" class="input-small ng-pristine ng-valid" ng-model="km.max">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <div range-slider min="km.rangeMin" max="km.rangeMax" model-min="km.min" model-max="km.max" prevent-equal-imn-max="true" pin-handle="min" show-values="true"></div>
+                </div>
+            </div>
+              <hr>
+            <div class="row row-center">
+                <div class="col">
+                    <h3>Show invites from people aged</h3>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col input-aged">
+                    <div class="list list-inset left">
+                        <label class="item item-input">
+                            <input type="text" class="input-small ng-valid ng-dirty" ng-model="aged.min">
+                        </label>
+                    </div>
+                </div>
+                <div class="col-10 to-center">
+                    <p>to</p>
+                </div>
+                <div class="col input-aged">
+                    <div class="list list-inset right">
+                        <label class="item item-input">
+                            <input type="text" class="input-small ng-valid ng-dirty" ng-model="aged.max">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <div range-slider min="aged.rangeMin" max="aged.rangeMax" model-min="aged.min" model-max="aged.max" prevent-equal-imn-max="true" show-values="true"></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<div class="edit-preferences-foot bar bar-footer bar-balanced ">
+    <div class="foot-nav center">
+        <img ng-click="Submit()" src="/img/button/submit.png" class="submit-small"/>
+    </div>
+</div>

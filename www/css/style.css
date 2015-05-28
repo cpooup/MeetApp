@@ -1,0 +1,612 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: 'RSU_Regular';
+    src: url('../font/Comfortaa Regular.ttf') format('truetype');
+}
+html, body,input, button, select, textarea,p,h1,h2,h3,h4,h5,label{
+    font-family: "RSU_Regular" !important;
+}
+
+h1{
+    font-size: 7vw !important;
+    margin-bottom: 0px !important;
+    font-weight: bold !important;
+}
+
+h2{
+    font-size: 7vw !important;
+    margin-bottom: 0px !important;
+    font-weight: bold !important;
+}
+h3{
+    font-size: 5.3vw !important;
+}
+
+/*Start Login Page*/
+
+.login-page{
+    background:url(../img/background.jpg);
+    background-size: 100% 100%;
+}
+
+.login-page .logo {
+    width: 75%;
+    opacity: .75;
+}
+
+.login-page .box-logo{
+    padding-bottom: 15%;
+    padding-top: 20%;
+}
+.login-page .scroll-content{
+    background: none;
+}
+.login-page .box-content{
+    padding-bottom: 10%;
+}
+.login-page h2,.login-page h3{
+    color: #fff;
+}
+.login-page .row-button{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.login-page .button.button-positive{
+    border-color: #387ef5;
+    background-color: #387ef5;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 6vw;
+    line-height: 10vw;
+    min-height: 100%;
+}
+
+.login-page .padding-login-fb {
+    position: relative;
+    margin: 50px auto;
+}
+
+
+.login-page .content.has-header.padding-vertical.padding-horizontal {
+    text-align: center;
+}
+
+
+/*Header*/
+/*.bar-header > *{
+    margin-top: 0px !important;
+}
+.bar.bar-header.bar-light{
+    height: 44px !important;
+}*/
+button.button.back-button.buttons.button-clear.header-item{
+     display: none !important;
+}
+.menu-left .item-complex .item-content,.menu-left .item-radio .item-content{
+    padding: 10px 49px 10px 16px;
+    background: #f0f0f0;
+}
+.menu-left .menu-left-icon{
+    height: 30px;
+    width:auto;
+}
+.menu-left .menu-left-icon-help{
+    height: 30px;
+    width:auto;
+}
+.menu-left .item-thumbnail-left > img:first-child{
+    max-width: 17vw;
+    max-height: 17vw;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+.menu-left .item{
+    border-color: transparent;
+    background-color: transparent;
+}
+.menu-left .item-thumbnail-left, .menu-left .item-thumbnail-left .item-content {
+    padding-top: 10px;
+    padding-left: 80px;
+    min-height: 75px;
+}
+.menu-left .has-header {
+    top: 93px !important;
+}
+.menu-left .item .badge{
+    top: 2px;
+    right: 120px;
+    padding: 0px 4px;
+    background-color: #fab13c;
+    color: #000;
+}
+button.button.button-icon.button-clear.ion-navicon:before{
+    font-size: 50px;
+}
+ion-header-bar.bar-stable.menu-left.bar.bar-header.disable-user-behavior {
+    height: auto; 
+    padding: 0px;
+
+}
+.menu-left .list .item{
+    border-left:0;
+    border-right:0;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-color: #cccccc;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.menu-left .item p{
+    color: #000;
+}
+.bar .title{
+    overflow: initial !important;
+    text-align: center !important;
+    left: 0 !important;
+    margin: 0 auto;
+    width: 100%;
+}
+.bar-stable .button.button-clear{
+    color: #fff; 
+}
+.bar.bar-stable .title{
+    color: #000;
+    font-size: 6vw;
+    font-weight: bold;
+}
+.bar.bar-stable,.bar.bar-light{
+    border-color: rgb(255,186,11);
+    background-color: rgb(255,186,11);
+    background-image: linear-gradient(0deg, rgb(255,186,11), rgb(245,165,0) 50%, transparent 50%);
+    color: #000;
+}
+.bar.bar-light .title{
+    color: #000;
+}
+
+/*Body*/
+.scroll-content{
+    border-color: #f0f0f0;
+    background-color:  #f0f0f0;
+}
+
+/*Footer*/
+.bar.bar-balanced.bar-footer {
+    border-color: rgb(255,186,11);
+    background-color: rgb(255,186,11);
+    background-image: linear-gradient(0deg, rgb(255,186,11), rgb(245,165,0) 50%, transparent 50%);
+}
+.bar-balanced .button.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 17px;
+}
+.foot-nav{
+    width:100%;
+    text-align: right;
+    padding: 1.5vw;
+}
+.foot-nav.center{
+    width:100%;
+    text-align: center;
+    padding: 1.5vw;
+}
+img.next-small {
+    width: 24vw;
+    height: 8vw;
+}
+img.submit-small {
+    width: 34vw;
+    height: 8vw;
+}
+/* Image Button */
+img.button-small {
+    width: 70%;
+}
+
+/* Image Button */
+img.icon-small {
+    width: 15%;
+}
+
+img.middle{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+/*Edit Profile Page*/
+.edit-profile-page .about-title.row.row-center .col{
+    padding:0;
+}
+.about.content.has-header.padding-vertical.padding-horizontal {
+    background-color: #ffffff;
+    padding-top: 0px;
+    min-height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.edit-profile-page .content img{
+    width: 100%;
+}
+
+.edit-profile-page .thumbnail-big{
+    max-height: 80vw;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.edit-profile-page .thumbnail-small{
+    max-height: 20vw;
+    overflow: hidden;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    padding: 0px;
+    max-width: 23vw;
+    margin: 3px;
+    min-height: 20vw;
+    text-align: center;
+    background-color: #cccccc;
+}
+
+.edit-profile-page .row + .row{
+    margin:0px;
+    padding: 1px;
+}
+
+.edit-profile-page .content img.plus{
+    width: 70%;
+    margin: 2vw auto;
+}
+
+.about.content.has-header.padding-vertical.padding-horizontal {
+    background-color: #ffffff;
+    padding-top: 0px;
+    min-height: 100px;
+}
+
+.about.content.has-header.padding-vertical.padding-horizontal .row{
+    padding: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 5vw;
+}
+
+.about-title{
+    text-align: center;
+    padding: 0px;
+}
+
+.edit-profile-page .padding-bottom, .edit-profile-page .padding-vertical{
+    padding-bottom: 0px;
+}
+
+/*Upload Images Page*/
+.upload-images-page .col{
+    text-align: center;
+}
+.upload-images-page .content.has-header.padding-vertical.padding-horizontal{
+    margin-top: 30%;
+}
+
+/*Edit Preferences Page*/
+.disable-pointer-events {
+    overflow: initial;
+}
+.edit-preferences-page h3 {
+    font-size: 6vw !important;
+}
+.edit-preferences-page hr{
+    width: 80%;
+    border: 0;
+    border-top: 2px solid #ccc;
+    border-radius: 5px;
+}
+.edit-preferences-page .content .row{
+    padding: 0px;
+}
+.edit-preferences-page .item-checkbox{
+    padding-left: 47px;
+    padding-bottom: 0px;
+}
+.edit-preferences-page .checkbox input:checked:before, .edit-preferences-page .checkbox input:checked + .checkbox-icon:before{
+    background: url(../img/check.png);
+    background-size: 100%;
+    border-color: #f0f0f0;
+}
+.edit-preferences-page .checkbox input:checked:after, .edit-preferences-page input:checked + .checkbox-icon:after{
+    opacity: 0;
+}
+.edit-preferences-page .checkbox input:before,.edit-preferences-page  .checkbox .checkbox-icon:before {
+    background: url(../img/no-check.png);
+    background-size: 100%;
+    border-color: #f0f0f0;
+}
+.edit-preferences-page .item{
+    border-width:0;
+    border-color: #f0f0f0;
+    background: #f0f0f0;
+    padding-top: 0px;
+    overflow: none; 
+    text-overflow: none; 
+    font-size: 6vw;
+}
+.edit-preferences-page .left {
+    margin-left: 40px;
+}
+.edit-preferences-page .right{
+    margin-right: 50px;
+}
+.edit-preferences-page .left .item-checkbox {
+    min-width: 120px;
+}
+.edit-preferences-page .right .item-checkbox {
+    min-width: 120px;
+}
+.edit-preferences-page h3{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px; 
+}
+.edit-preferences-page .ngrs-range-slider{
+    background: url(../img/slide1.png);
+    border-width: 0;
+    border-color: #f0f0f0;
+    border: 0px;
+    -webkit-box-shadow: none;
+    background-size: 100%;
+    height: 14px;
+}
+.edit-preferences-page .ngrs-range-slider .ngrs-runner{
+    margin: 0px;   
+}
+.edit-preferences-page .ngrs-range-slider .ngrs-join{
+    top: 14%;
+    background-image: linear-gradient( rgb(255,186,11), rgb(245,165,0));
+}
+.edit-preferences-page .ngrs-range-slider .ngrs-handle{
+    top: -5px;
+    border-radius: 10px;
+    background-image: linear-gradient( rgb(255,186,11), rgb(245,165,0));
+    border:0px;
+}
+.edit-preferences-page .input-km{
+    text-align: center;
+}
+.edit-preferences-page .list-inset input.input-small {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    background: #000;
+    color: rgb(255,186,11);
+    font-size: 10vw;
+    height: auto;
+    border-radius: 5px;
+}
+.edit-preferences-page .input-km .list-inset{
+    margin: 0 auto;
+    width: 25%;
+}
+.edit-preferences-page .input-aged{
+    text-align: center;
+}
+.edit-preferences-page .input-aged .list-inset{
+    margin: 0 auto;
+    width: 60%;
+}
+.edit-preferences-page .input-aged .list-inset.left{
+    float:right;
+}
+.edit-preferences-page .input-aged .list-inset.right{
+    float:left;
+}
+.edit-preferences-page .col-10.to-center {
+    text-align: right;
+    margin-right: 4px;
+}
+
+/*Look For Invites Page*/
+.notification{
+    border-color: transparent;
+    background-color: transparent;
+}
+.notification i.icon.ion-chatbubble-working {
+    background-image: url(../img/notification.png);
+    min-width: 35px;
+    background-size: 100%;
+    height: 100%;
+}
+.notification .ion-chatbubble-working:before{
+    content: "";
+}
+a.item.item-icon-left.item-icon-right.notification{
+    padding-right: 40px;
+}
+.notification .badge.badge-assertive {
+    margin-left: 5px;
+    display: inherit;
+    margin-top: 0;
+    top: 0;
+    background-image: url(../img/notification.png);
+    border-radius: 0px;
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    background-size: 100%;
+    right: 5px;
+}
+.notification .badge{
+    padding: 5px 8px;
+}
+
+/*Home page*/
+.home-page .content.has-header.padding-vertical.padding-horizontal{
+    top: 40px;
+}
+
+.home-page .scroll-content{
+    border-color: #1f1f1f;
+    background-color: #1f1f1f;
+    background-image: #1f1f1f;
+    color: #fab13c;
+}
+.home-page .scroll-content h1{
+    color: #fab13c;
+    text-align: center;
+    font-size: 10vw !important
+}
+.home-foot img.submit-small {
+    width: 45vw;
+}
+.home-page .item{
+    border-color: transparent;
+    background-color: transparent;
+    color: #fab13c;
+    font-size: 6vw;
+}
+
+.home-page .checkbox input:before, .home-page .checkbox-icon:before{
+    background: url(../img/no-checkB.png);
+    background-size: 100%;
+    background-color: transparent;
+    border: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+.home-page .item-checkbox {
+    padding-left: 45px;
+    margin-left: 60px;
+    padding-top: 10px;
+}
+.home-page .checkbox input:after,.home-page .checkbox-icon:after{
+    background: url(../img/checkB.png);
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+    border:0px;
+    top: 0;
+    left: 0;
+}
+.content-nav.center {
+    width: 100%;
+    text-align: center;
+    padding: 1.5vw;
+}
+.content-nav img.submit-small {
+    width: 55vw;
+}
+
+/**/
+.LookForInvites-page .box{
+    display: table-cell; 
+    vertical-align: middle ;
+}
+.LookForInvites-page .box img.middle{
+    position: absolute;
+    top: -25px;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.LookForInvites-page .slider-slide{
+    min-height: 505px;
+    background-color: rgb(26,26,26);
+}
+.LookForInvites-page .box img{   
+
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    margin:auto;
+    vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+}
+.LookForInvites-page .top-right{
+    position: absolute;
+    top:0;
+    width: 50%;
+    right: 0;
+    padding: 3%;
+}
+.LookForInvites-page .top-left{
+    position: absolute;
+    top: 0;
+    width: 25%;
+    padding: 3%;
+}
+.LookForInvites-page .top-left .interest,.LookForInvites-page .top-left .friend{
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: #fab13c;
+}
+
+.LookForInvites-page .box .top-left img{
+    width:15px;
+    height: 15px;
+    min-height:100%
+}
+.LookForInvites-page .top-right .expires,.LookForInvites-page .top-right .time{
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: #fab13c;
+}
+.LookForInvites-page .top-right .button.button-light {
+    border-color: #fab13c;
+    background-color: #000;
+    color: #fab13c;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    min-height: 30px;
+    width: 75px;
+    min-width: 75px;
+    font-size: 7vw;
+    border-radius: 5px;
+    border-width: 2px;
+    line-height: 27px;
+}
+.LookForInvites-page .box .bottom{
+    position: absolute;
+    bottom: 45px;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    padding: 5px;
+}
+.LookForInvites-page .box .bottom h1{
+    color:#f79320;
+    text-align: center;
+    font-size: 9vw !important;
+}
+.LookForInvites-page .box .look-icon-small{
+    width: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    min-height: 25px;
+}
+.LookForInvites-page .box .LookForInvites-foot .foot-nav.center{
+    padding: 0vw;
+}
+.LookForInvites-page .box .LookForInvites-foot .row.row-center {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.LookForInvites-page .box .LookForInvites-foot .col{  padding: 3px;}

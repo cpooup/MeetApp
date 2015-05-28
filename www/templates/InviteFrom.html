@@ -1,0 +1,85 @@
+<ion-view view-title="Create Invite"  class="InviteFrom-page">
+    <ion-content ng-controller="InviteFromController">
+        <div class="content has-header padding-vertical padding-horizontal">
+            <div class="row row-center">
+                <div class="col">
+                    <h2>Subject :</h2>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <h4>Max 30 characters</h4>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <label class="item item-input">
+                        <textarea></textarea>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div class="row row-center">
+                <div class="col">
+                    <h2>Content (optional):</h2>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <h4>Max 150 characters</h4>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col">
+                    <label class="item item-input">
+                        <textarea></textarea>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div class="row row-center">
+                <div class="col">
+                    <h3>Categories:</h3>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col left">
+                    <ion-checkbox ng-model="isCheckedAll.value">All</ion-checkbox>
+                </div>
+                <div class="col right">
+                    <ion-checkbox ng-model="isCheckedParty.value">Party</ion-checkbox>
+                </div>
+            </div>
+             <hr>
+            <div class="row row-center">
+                <div class="col">
+                    <h3>Set time limit:</h3>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col input-km">
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <input type="text" placeholder="HH:MM">
+                        </label>
+                    </div>
+                </div>
+            </div>
+             <hr>
+            <div class="row row-center">
+                <div class="col left">
+                    <ion-checkbox ng-model="isCheckedAll.value">All</ion-checkbox>
+                </div>
+                <div class="col right">
+                    <img src="img/facebook.png" />
+                </div>
+            </div>
+             <hr>
+        </div>
+    </ion-content>
+</ion-view>
+<div class="edit-preferences-foot bar bar-footer bar-balanced ">
+    <div class="foot-nav center">
+        <img ng-click="Submit()" src="/img/button/submit.png" class="submit-small"/>
+    </div>
+</div>
