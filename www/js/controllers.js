@@ -38,13 +38,13 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
         $location.path("/EditPreferences");
     };
 
-    $scope.getPhoto = function (source) {
+    $scope.getPhoto = function () {
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
                     destinationType: navigator.camera.DestinationType.DATA_URI,
-                    sourceType: source });
+                    sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY });
         /*Camera.getPicture(navigator.camera.PictureSourceType.PHOTOLIBRARY).then(function (imageURI) {
            console.log(imageURI);*/
-             };
+             }
 
 /* Camera */
    /* $scope.takePic = function() {
@@ -61,27 +61,23 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
 
 /* Camera */
     $scope.takePic = function() {
-        var options = {
+        navigator.camera.getPicture(onSuccess,onFail,{
                    quality : 75,
                    destinationType : Camera.DestinationType.DATA_URL,
-                   sourceType : Camera.PictureSourceType.CAMERA,
                    allowEdit : true,
                    encodingType: Camera.EncodingType.JPEG,
-                   popoverOptions: CameraPopoverOptions,
-                   targetWidth: 500,
-                   targetHeight: 500,
                    saveToPhotoAlbum: false
-                   };
-       navigator.camera.getPicture(onSuccess,onFail,options);
+                   });
+
     }
         var onSuccess = function(imageURI) {
         /*console.log(FILE_URI);
         $scope.picData = FILE_URI;
         $scope.$apply();*/
         var FileIO= document.getElementById('FileIO');
-                 FileIO.style.display='block';
                  FileIO.src=imageURI;
-    };
+                 $scope.$apply();
+    }
         var onFail = function(e) {
         console.log("On fail " + e);
     }
@@ -101,6 +97,7 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
     };
 
 });
+
 
 //Edit Preferences Page
 MeetApp.controller("EditPreferencesController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
