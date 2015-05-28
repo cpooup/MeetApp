@@ -4,13 +4,13 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
         disableBack: true
     });
     $scope.login = function () {
-//        $cordovaOauth.facebook("115777701818035", ["email", "read_stream", "user_website", "user_location", "user_relationships"]).then(function (result) {
-//            $localStorage.accessToken = result.access_token;
-//            $location.path("/LookForInvites");
-//        }, function (error) {
-//            alert("There was a problem signing in!  See the console for logs");
-//            console.log(error);
-//        });
+        $cordovaOauth.facebook("1611671822423925", ["email", "read_stream", "user_location", "user_relationships","public_profile","user_friends"]).then(function (result) {
+            $localStorage.accessToken = result.access_token;
+           $location.path("/LookForInvites");
+        }, function (error) {
+            alert("There was a problem signing in!  See the console for logs");
+            console.log(error);
+        });
         $location.path("/EditProfile");
     };
 
