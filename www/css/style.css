@@ -559,7 +559,7 @@ a.item.item-icon-left.item-icon-right.notification{
 .LookForInvites-page .box .top-left img{
     width:15px;
     height: 15px;
-    min-height:100%
+    min-height:100%r
 }
 .LookForInvites-page .top-right .expires,.LookForInvites-page .top-right .time{
     width: 50%;
@@ -610,3 +610,62 @@ a.item.item-icon-left.item-icon-right.notification{
 }
 
 .LookForInvites-page .box .LookForInvites-foot .col{  padding: 3px;}
+
+
+/*Invite Form*/
+.InviteFrom-page .scroll-content{
+    top: 0px !important;
+    text-align: center;
+}
+.InviteFrom-page .col{
+    padding:0;
+}
+.InviteFrom-page .scroll-content h4{
+      font-size: 4vw;
+}
+.InviteFrom-page hr{
+    width: 80%;
+    border: 0;
+    border-top: 2px solid #000;
+    border-radius: 5px;
+}
+.InviteFrom-page .item-checkbox{
+    padding-left: 47px;
+    padding-bottom: 0px;
+}
+.InviteFrom-page .checkbox input:checked:before, .InviteFrom-page .checkbox input:checked + .checkbox-icon:before{
+    background: url(../img/check.png);
+    background-size: 100%;
+    border-color: #f0f0f0;
+}
+.InviteFrom-page .checkbox input:checked:after, .InviteFrom-page input:checked + .checkbox-icon:after{
+    opacity: 0;
+}
+.InviteFrom-page .checkbox input:before,.InviteFrom-page  .checkbox .checkbox-icon:before {
+    background: url(../img/no-check.png);
+    background-size: 100%;
+    border-color: #f0f0f0;
+}
+.InviteFrom-page .item{
+    border-width:0;
+    border-color: #f0f0f0;
+    background: #f0f0f0;
+    padding-top: 0px;
+    overflow: none; 
+    text-overflow: none; 
+    font-size: 6vw;
+}
+.InviteFrom-page .left {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.InviteFrom-page .right{
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.InviteFrom-page .left .item-checkbox {
+    min-width: 120px;
+}
+.InviteFrom-page .right .item-checkbox {
+    min-width: 120px;
+}
