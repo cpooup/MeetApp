@@ -16,7 +16,7 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
              $cordovaOauth.facebook("115777701818035", ["email", "public_profile", "user_friends"]).then(function (result) {
                         $localStorage.accessToken = result.access_token;
                         $location.path("/EditProfile");
-                        console.log(result);
+                        console.log("result" + JSON.stringify(result));
                     }, function (error) {
                         alert("There was a problem signing in!  See the console for logs");
                         console.log(error);
