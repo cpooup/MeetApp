@@ -14,7 +14,7 @@
             <div class="row row-center">
                 <div class="col">
                     <label class="item item-input">
-                        <textarea maxlength="30" data-ng-minLength="1"></textarea>
+                        <textarea maxlength="30" rows="3" data-ng-minLength="1"></textarea>
                     </label>
                 </div>
             </div>
@@ -65,14 +65,13 @@
             </div>
              <hr>
             <div class="row row-center">
-                <div class="col left">
-                    <ion-checkbox ng-model="isCheckedShare.value">All</ion-checkbox>
+                <div class="col left share">
+                    <ion-checkbox ng-model="isCheckedShare.value">Share to</ion-checkbox>
                 </div>
                 <div class="col right">
                     <img class="fb-small" src="img/facebook.png" />
                 </div>
             </div>
-             <hr>
         </div>
     </ion-content>
 </ion-view>

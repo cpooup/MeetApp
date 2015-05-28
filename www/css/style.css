@@ -80,7 +80,7 @@ h3{
     height: 44px !important;
 }*/
 button.button.back-button.buttons.button-clear.header-item{
-     display: none !important;
+    display: none !important;
 }
 .menu-left .item-complex .item-content,.menu-left .item-radio .item-content{
     padding: 10px 49px 10px 16px;
@@ -621,7 +621,7 @@ a.item.item-icon-left.item-icon-right.notification{
     padding:0;
 }
 .InviteFrom-page .scroll-content h4{
-      font-size: 4vw;
+    font-size: 4vw;
 }
 .InviteFrom-page hr{
     width: 80%;
@@ -650,7 +650,7 @@ a.item.item-icon-left.item-icon-right.notification{
     border-width:0;
     border-color: #f0f0f0;
     background: #f0f0f0;
-    padding-top: 0px;
+      padding-top: 0px;
     overflow: none; 
     text-overflow: none; 
     font-size: 6vw;
@@ -670,5 +670,31 @@ a.item.item-icon-left.item-icon-right.notification{
     min-width: 120px;
 }
 .InviteFrom-page input {
+    font-size: 6vw;
+    background-color: #fff;
+    vertical-align: middle;
+    max-width: 200px;
     text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    height: 30px;
+    margin-top: 10px;
+}
+.InviteFrom-page .share .item{
+    font-size: 4vw;
+    min-width: 0;
+    height: 30px;
+}
+.InviteFrom-page .fb-small{
+    width:100px;
+}
+.InviteFrom-page .row .col > *{
+    color:rgb(255,186,11);
+} 
+.InviteFrom-page .scroll-content,.InviteFrom-page .item{
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
+.InviteFrom-page .share .item-content.disable-pointer-events {
+  padding-top: 6px;
 }
