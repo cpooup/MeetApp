@@ -80,6 +80,33 @@ MeetApp.config(function ($stateProvider, $urlRouterProvider) {
                 }
             })
             
+            .state('app.TakeAPictureEnroll', {
+                url: "/TakeAPictureEnroll",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/TakeAPictureEnroll.html"
+                    }
+                }
+            })
+            
+            .state('app.WriteProposal', {
+                url: "/WriteProposal",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/WriteProposal.html"
+                    }
+                }
+            })
+            
+            .state('app.UserInfo', {
+                url: "/UserInfo",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/UserInfo.html"
+                    }
+                }
+            })
+            
             .state('app.InviteFrom', {
                 url: "/InviteFrom",
                 views: {

@@ -222,19 +222,39 @@ MeetApp.controller("TakeAPictureController", function ($scope, $cordovaOauth, $l
     };
 });
 
+//Take A Picture Enroll Page
+MeetApp.controller("TakeAPictureEnrollController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
+    $ionicViewService.nextViewOptions({
+        disableBack: true
+    });
+    $scope.Next = function () {
+        $location.path("/app/WriteProposal");
+    };
+});
+
 //Look For Invites Page
 MeetApp.controller("LookForInvitesController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
     $scope.InviteYes = function () {
-        $location.path("/app/TakeAPicture");
+        $location.path("/app/TakeAPictureEnroll");
     };
     $scope.InviteInfo = function () {
-        $location.path("/app/EditPreferences");
+        $location.path("/app/UserInfo");
     };
     $scope.InviteNo = function () {
-        $location.path("/app/EditPreferences");
+        console.log("InviteNo");
+    };
+});
+
+//User Info Page
+MeetApp.controller("UserInfoController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
+    $ionicViewService.nextViewOptions({
+        disableBack: true
+    });
+    $scope.ViewMore = function () {
+        console.log("ViewMore");
     };
 });
 
