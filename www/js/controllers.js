@@ -1,22 +1,38 @@
 //Login Page
-MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService,$http) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
     $scope.login = function () {
      if ($localStorage.hasOwnProperty("accessToken") === true) {
-                $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status", format: "json"}}).then(function (result) {
-                    $scope.profileData = result.data;
-                }, function (error) {
-                    alert("There was a problem getting your profile.  Check the logs for details.");
-                    console.log(error);
-                });
+                    $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status", format: "json"}}).then(function (result) {
+                                                                        console.log("result graph" + JSON.stringify(result));
+                                                                        var res = JSON.stringify(result);
+                                                                        $localStorage.FBProfileData = res.data;
+                                                                    }, function (error) {
+                                                                        alert("There was a problem getting your profile.  Check the logs for details.");
+                                                                        console.log(error);
+                                                     });
                  $location.path("/app/Home");
             } else {
              $cordovaOauth.facebook("115777701818035", ["email", "public_profile", "user_friends"]).then(function (result) {
-                        $localStorage.accessToken = result.access_token;
+                        console.log("result login" + JSON.stringify(result));
+                        var res = JSON.stringify(result);
+                        $localStorage.FBaccessToken = res.access_token;
+                        $localStorage.FBexpires_in = res.expires_in;
+                        $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status", format: "json"}}).then(function (result) {
+                                                    console.log("result graph" + JSON.stringify(result));
+                                                    var res = JSON.stringify(result);
+                                                    $localStorage.FBProfileData = res.data;
+                                                },
+                                                function (error) {
+                                                    alert("There was a problem getting your profile.  Check the logs for details.");
+                                                    console.log(error);
+                                 });
+
+
                         $location.path("/EditProfile");
-                        console.log("result" + JSON.stringify(result));
+                         console.log("result localStorage" + JSON.stringify($localStorage));
                     }, function (error) {
                         alert("There was a problem signing in!  See the console for logs");
                         console.log(error);
