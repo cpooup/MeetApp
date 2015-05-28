@@ -1,17 +1,28 @@
 //Login Page
-MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
+MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
     $scope.login = function () {
-        /*    $cordovaOauth.facebook("1611671822423925", ["email", "read_stream", "user_location", "user_relationships","public_profile","user_friends"]).then(function (result) {
-         $localStorage.accessToken = result.access_token;
-         $location.path("/LookForInvites");
-         }, function (error) {
-         alert("There was a problem signing in!  See the console for logs");
-         console.log(error);
-         });*/
-        $location.path("/EditProfile");
+     if ($localStorage.hasOwnProperty("accessToken") === true) {
+                $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status", format: "json"}}).then(function (result) {
+                    $scope.profileData = result.data;
+                }, function (error) {
+                    alert("There was a problem getting your profile.  Check the logs for details.");
+                    console.log(error);
+                });
+                 $location.path("/app/Home");
+            } else {
+             $cordovaOauth.facebook("115777701818035", ["email", "public_profile", "user_friends"]).then(function (result) {
+                        $localStorage.accessToken = result.access_token;
+                        $location.path("/EditProfile");
+                        console.log(result);
+                    }, function (error) {
+                        alert("There was a problem signing in!  See the console for logs");
+                        console.log(error);
+                    });
+            }
+
     };
 
 });
