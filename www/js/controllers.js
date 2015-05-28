@@ -3,12 +3,12 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
+    //$localStorage.accessToken=null;
     $scope.login = function () {
      if ($localStorage.hasOwnProperty("accessToken") === true) {
                     $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status", format: "json"}}).then(function (result) {
                                                                         console.log("result graph" + JSON.stringify(result));
-                                                                        var res = JSON.stringify(result);
-                                                                        $localStorage.FBProfileData = res.data;
+                                                                        $localStorage.FBProfileData = result.data;
                                                                     }, function (error) {
                                                                         alert("There was a problem getting your profile.  Check the logs for details.");
                                                                         console.log(error);
@@ -17,13 +17,13 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
             } else {
              $cordovaOauth.facebook("115777701818035", ["email", "public_profile", "user_friends"]).then(function (result) {
                         console.log("result login" + JSON.stringify(result));
-                        var res = JSON.stringify(result);
-                        $localStorage.FBaccessToken = res.access_token;
-                        $localStorage.FBexpires_in = res.expires_in;
-                        $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status", format: "json"}}).then(function (result) {
+                        $localStorage.FBaccessToken = result.access_token;
+                        $localStorage.FBexpires_in = result.expires_in;
+                        $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.FBaccessToken, fields: "id,name,gender,location,website,picture,relationship_status", format: "json"}}).then(function (result) {
                                                     console.log("result graph" + JSON.stringify(result));
-                                                    var res = JSON.stringify(result);
-                                                    $localStorage.FBProfileData = res.data;
+                                                    $localStorage.FBProfileData = result.data;
+                                                    $localStorage.ProfileImaegs.push(result.data.picture.data.url);
+                                                    console.log("result ProfileImaegs" + JSON.stringify($localStorage.ProfileImaegs));
                                                 },
                                                 function (error) {
                                                     alert("There was a problem getting your profile.  Check the logs for details.");
@@ -45,6 +45,10 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
 
 //Edit Profile Page
 MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
+    $scope.getFirstImages =  {
+           value:;
+       };
+
     $ionicViewService.nextViewOptions({
         disableBack: true
     });
@@ -83,13 +87,10 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
         });
 
     }
-    var onSuccess = function (imageURI) {
-        /*console.log(FILE_URI);
-         $scope.picData = FILE_URI;
-         $scope.$apply();*/
-        var FileIO = document.getElementById('FileIO');
-        FileIO.src = imageURI;
-        $scope.$apply();
+    var onSuccess = function (DATA_URI) {
+         console.log(DATA_URI);
+         $scope.picData = DATA_URI;
+         $scope.$apply();
     }
     var onFail = function (e) {
         console.log("On fail " + e);
