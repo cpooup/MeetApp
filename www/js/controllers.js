@@ -20,7 +20,7 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
                                                     console.log("result graph" + JSON.stringify(result));
                                                     $localStorage.FBProfileData = result.data;
                                                     var pic;
-                                                    pic = JSON.parse(localStorage.getItem('result'));
+                                                    pic = JSON.parse(localStorage.getItem('result'))|| [];
                                                     pic.push(result.data.picture.data.url);
                                                     console.log(pic);
                                                 },
@@ -50,6 +50,7 @@ MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $lo
     $scope.nextEditPreferences = function () {
         $location.path("/EditPreferences");
     };
+    $scope
 });
 
 //Upload Images Page
