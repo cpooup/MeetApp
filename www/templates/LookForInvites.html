@@ -1,6 +1,6 @@
 <ion-view view-title="GoSpotting"  class="LookForInvites-page">
     <ion-content ng-controller="LookForInvitesController">
-        <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+        <ion-slide-box does-continue="true" show-pager="false" on-slide-changed="slideHasChanged($index)">
             <ion-slide>
                 <div class="box">
                     <div class="top-left">
@@ -25,13 +25,13 @@
                         <div class="foot-nav center">
                             <div class="row row-center">
                                 <div class="col">
-                                    <img ng-click="CreateInvite()" src="img/yes.png" class="look-icon-small"/>
+                                    <img ng-click="InviteYes()" src="img/yes.png" class="look-icon-small"/>
                                 </div>
                                 <div class="col">
-                                    <img ng-click="CreateInvite()" src="img/info.png" class="look-icon-small"/>
+                                    <img ng-click="InviteInfo()" src="img/info.png" class="look-icon-small"/>
                                 </div>
                                 <div class="col">
-                                    <img ng-click="CreateInvite()" src="img/no.png" class="look-icon-small"/>
+                                    <img ng-click="InviteNo()" src="img/no.png" class="look-icon-small"/>
                                 </div>
                             </div>
                         </div>
@@ -61,14 +61,14 @@
                     <div class="LookForInvites-foot bar bar-footer bar-balanced ">
                         <div class="foot-nav center">
                             <div class="row row-center">
-                                <div class="col">
-                                    <img ng-click="CreateInvite()" src="img/yes.png" class="look-icon-small"/>
+                               <div class="col">
+                                    <img ng-click="InviteYes()" src="img/yes.png" class="look-icon-small"/>
                                 </div>
                                 <div class="col">
-                                    <img ng-click="CreateInvite()" src="img/info.png" class="look-icon-small"/>
+                                    <img ng-click="InviteInfo()" src="img/info.png" class="look-icon-small"/>
                                 </div>
                                 <div class="col">
-                                    <img ng-click="CreateInvite()" src="img/no.png" class="look-icon-small"/>
+                                    <img ng-click="InviteNo()" src="img/no.png" class="look-icon-small"/>
                                 </div>
                             </div>
                         </div>

@@ -160,9 +160,6 @@ MeetApp.controller("TakeAPictureController", function ($scope, $cordovaOauth, $l
 
 //Take A Picture Enroll Page
 MeetApp.controller("TakeAPictureEnrollController", function ($scope, $cordovaOauth, $localStorage, $location) {
-    $ionicViewService.nextViewOptions({
-        disableBack: true
-    });
     $scope.Next = function () {
         $location.path("/app/WriteProposal");
     };
@@ -171,7 +168,6 @@ MeetApp.controller("TakeAPictureEnrollController", function ($scope, $cordovaOau
 //Look For Invites Page
 MeetApp.controller("LookForInvitesController", function ($scope, $cordovaOauth, $localStorage, $location) {
     $scope.InviteYes = function () {
-        console.log("test");
         $location.path("/app/TakeAPictureEnroll");
     };
     $scope.InviteInfo = function () {
