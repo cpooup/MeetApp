@@ -19,9 +19,13 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
                         $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.FBaccessToken, fields: "id,name,gender,location,website,picture,relationship_status,friends,friendlists", format: "json"}}).then(function (result) {
                                                     console.log("result graph" + JSON.stringify(result));
                                                     $localStorage.FBProfileData = result.data;
-                                                    $localStorage.ProfileImaegs.push(result.data.picture.data.url);
-                                                    console.log("result ProfileImaegs" + JSON.stringify($localStorage.ProfileImaegs));
-                                                },
+                                                    console.log(result.data);
+                                                    var pic;
+                                                    pic = JSON.parse(localStorage.getItem('result'))|| [];
+                                                    //console.log(pic);
+                                                    pic.push(result.data.picture.data.url);
+                                                    console.log(pic);
+                                                    },
                                                 function (error) {
                                                     alert("There was a problem getting your profile.  Check the logs for details.");
                                                     console.log(error);
@@ -29,7 +33,7 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
 
 
                         $location.path("/EditProfile");
-                         console.log("result localStorage" + JSON.stringify($localStorage));
+                         //console.log("result localStorage" + JSON.stringify($localStorage));
                     }, function (error) {
                         alert("There was a problem signing in!  See the console for logs");
                         console.log(error);
@@ -41,19 +45,17 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
 });
 
 //Edit Profile Page
-MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $localStorage, $location) {
-    $scope.getFirstImages =  {
-           //value:;
-       };
-    $ionicViewService.nextViewOptions({
-        disableBack: true
-    });
-    $scope.nextUploadImages = function () {
-        $location.path("/UploadImages");
-    };
-    $scope.nextEditPreferences = function () {
-        $location.path("/EditPreferences");
-    };
+MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $localStorage, $location,$ionicViewService) {
+        $ionicViewService.nextViewOptions({
+            disableBack: true
+        });
+        $scope.nextUploadImages = function () {
+            $location.path("/UploadImages");
+        };
+        $scope.nextEditPreferences = function () {
+            $location.path("/EditPreferences");
+        };
+        $
 });
 
 //Upload Images Page
@@ -83,6 +85,7 @@ MeetApp.controller("UploadImagesController", function ($scope, $cordovaOauth, $l
          console.log(DATA_URI);
          $scope.picData = DATA_URI;
          $scope.$apply();
+         $(".col item item-image thumbnail-big").append(""+DATA_URI);
     }
     var onFail = function (e) {
         console.log("On fail " + e);
