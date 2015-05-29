@@ -18,6 +18,7 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
                         $localStorage.FBexpires_in = result.expires_in;
                         $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.FBaccessToken, fields: "id,name,gender,location,website,picture,relationship_status,friends,friendlists", format: "json"}}).then(function (result) {
                                                     console.log("result graph" + JSON.stringify(result));
+                                                    console.log("result paging" + JSON.stringify(result.paging));
                                                     $localStorage.FBProfileData = result.data;
                                                     $localStorage.ProfileImaegs.push(result.data.picture.data.url);
                                                     console.log("result ProfileImaegs" + JSON.stringify($localStorage.ProfileImaegs));
