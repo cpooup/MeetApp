@@ -116,6 +116,24 @@ MeetApp.config(function ($stateProvider, $urlRouterProvider) {
                 }
             })
             
+            .state('app.Chat', {
+                url: "/Chat",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/Chat.html"
+                    }
+                }
+            })
+            
+            .state('app.ShareLocation', {
+                url: "/ShareLocation",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/ShareLocation.html"
+                    }
+                }
+            })
+            
             .state('app.InviteFrom', {
                 url: "/InviteFrom",
                 views: {

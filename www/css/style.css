@@ -846,3 +846,41 @@ a.item.item-icon-left.item-icon-right.notification{
     border-radius: 5px;
     border-color: #000;
 }
+
+/**/
+.ShareLocation-page{
+
+}
+.ShareLocation-page .scroll-content{
+    top: 0px !important;
+    text-align: center;
+}
+.ShareLocation-page label.item.item-input{
+    padding:0px;
+}
+.ShareLocation-page .km-time span{
+    font-size: 7vw;
+}
+.ShareLocation-page .km-time .left{
+    text-align: left;
+}
+.ShareLocation-page .km-time .right{
+    text-align: right;
+}
+.ShareLocation-page .row.row-center.km-time {
+    margin: 0;
+}
+.ShareLocation-page .google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    border: 5px solid #fff;
+}
+.ShareLocation-page .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}

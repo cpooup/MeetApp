@@ -1,58 +1,37 @@
-<ion-view view-title="Proposals"  class="Proposals-page">
-    <ion-content ng-controller="ProposalsController">
+<ion-view view-title="Share Location"  class="ShareLocation-page">
+    <ion-content ng-controller="ShareLocationController">
         <div class="content has-header padding-vertical padding-horizontal">
-            <div class="list card">
-                <div class="item">
-                    <div class="col-34 left">
-                        <img src="ref/cheers1L1.jpg">
-                        <p class="time">10 min ago</p>
-                    </div>
-                    <div class="col-60 right">
-                        <div class="item item-input message">
-                            <p>"Hey Girls. Me and my buddy would like to join, but you gotta pay for your own damn drinks.."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item" href="#">
-                       <img ng-click="Accept()" src="img/button/accept.jpg" class="submit-small"/>
-                    </a>
-                    <a class="tab-item" href="#">
-                        <img ng-click="ChatFrist()" src="img/button/chat-first.jpg" class="submit-small"/>
-                    </a>
-                    <a class="tab-item" href="#">
-                        <img ng-click="Reject()" src="img/button/reject.jpg" class="submit-small"/>
-                    </a>
+            <div class="row row-center">
+                <div class="col">
+                    <h2>Conchita has accepted your proposal!<br>
+                        Name of place <small>(Optional)</small> :</h2>
                 </div>
             </div>
-            <hr>
-            <div class="list card">
-                <div class="item">
-                    <div class="col-34 left">
-                        <img src="ref/Man-Smoking-Money--37253.jpg">
-                        <p class="time">10 min ago</p>
-                    </div>
-                    <div class="col-60 right">
-                        <div class="item item-input message">
-                            <p> Cough cough cough!!!</p>
-                        </div>
-                    </div>
+            <div class="row row-center">
+                <div class="col">
+                    <label class="item item-input">
+                        <input type="text">
+                    </label>
                 </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item" href="#">
-                       <img ng-click="Accept()" src="img/button/accept.jpg" class="submit-small"/>
-                    </a>
-                    <a class="tab-item" href="#">
-                        <img ng-click="ChatFrist()" src="img/button/chat-first.jpg" class="submit-small"/>
-                    </a>
-                    <a class="tab-item" href="#">
-                        <img ng-click="Reject()" src="img/button/reject.jpg" class="submit-small"/>
-                    </a>
+            </div>
+            <div class="row row-center km-time">
+                <div class="col-50 left">
+                    <span>Time limit</span><span class="time">19:59</span>
+                </div>
+                <div class="col-50 right">
+                   <span class="km">3kms</span><span>away</span>
+                </div>
+            </div>
+            <div class="row row-center">
+                <div class="col google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.99567780453!2d99.01148700000006!3d18.842859999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDUwJzM0LjMiTiA5OcKwMDAnNDEuNCJF!5e0!3m2!1sen!2sth!4v1432881764784" width="100%" height="300" frameborder="0" style="border:0"></iframe>
                 </div>
             </div>
         </div>
     </ion-content>
 </ion-view>
-<div ng-controller="ProposalsController" class="Proposals-foot bar bar-footer bar-balanced ">
-
+<div ng-controller="ShareLocationController" class="ShareLocation-foot bar bar-footer bar-balanced ">
+    <div class="foot-nav center">
+        <img ng-click="Confirm()" src="img/button/confirm.png" class="submit-small"/>
+    </div>
 </div>
