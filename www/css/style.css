@@ -708,3 +708,46 @@ a.item.item-icon-left.item-icon-right.notification{
   width: 45vw;
   height: 8vw;
 }
+
+/*Take A Picture Enrool Page*/
+.TakeAPictureEnroll-foot .foot-nav img.submit-small {
+  width: 45vw;
+  height: 8vw;
+}
+.TakeAPictureEnroll-foot.bar.bar-footer.bar-balanced{
+      border-color: #0bd5e3;
+  background-color: #0bd5e3;
+  background-image: linear-gradient(0deg, #0bd5e3, #50e0eb 50%, transparent 50%);
+}
+
+/*Write Proposal Page*/
+.WriteProposal-page .scroll-content{
+    top: 20px !important;
+    text-align: center;
+}
+.WriteProposal-page .item{
+    border-width:0;
+    border-color: #f0f0f0;
+    background: #f0f0f0;
+      padding-top: 0px;
+    overflow: none; 
+    text-overflow: none; 
+    font-size: 6vw;
+}
+.WriteProposal-page .row .col > *{
+    color:rgb(255,186,11);
+    text-align: center;
+} 
+.WriteProposal-page .scroll-content,.WriteProposal-page .item{
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
+.WriteProposal-foot .foot-nav img.submit-small {
+  width: 45vw;
+  height: 8vw;
+}
+.WriteProposal-foot.bar.bar-footer.bar-balanced{
+      border-color: #0bd5e3;
+  background-color: #0bd5e3;
+  background-image: linear-gradient(0deg, #0bd5e3, #50e0eb 50%, transparent 50%);
+}

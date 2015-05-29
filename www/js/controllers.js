@@ -143,7 +143,6 @@ MeetApp.controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
 //Home Page
 MeetApp.controller("HomeController", function ($scope, $cordovaOauth, $localStorage, $location) {
     $scope.CreateInvite = function () {
-        console.log("test");
         $location.path("/app/TakeAPicture");
     };
     $scope.StartFlipping = function () {
@@ -160,6 +159,9 @@ MeetApp.controller("TakeAPictureController", function ($scope, $cordovaOauth, $l
 
 //Take A Picture Enroll Page
 MeetApp.controller("TakeAPictureEnrollController", function ($scope, $cordovaOauth, $localStorage, $location) {
+    $scope.RetakePhoto = function () {
+        console.log("RetakePhoto");
+    };
     $scope.Next = function () {
         $location.path("/app/WriteProposal");
     };
@@ -182,6 +184,16 @@ MeetApp.controller("LookForInvitesController", function ($scope, $cordovaOauth, 
 MeetApp.controller("UserInfoController", function ($scope, $cordovaOauth, $localStorage, $location) {
     $scope.ViewMore = function () {
         console.log("ViewMore");
+    };
+});
+
+//Write Proposal Page
+MeetApp.controller("WriteProposalController", function ($scope, $cordovaOauth, $localStorage, $location) {
+    $scope.RetakePhoto = function () {
+        console.log("RetakePhoto");
+    };
+    $scope.Send = function () {
+        $location.path("/app/Proposals");
     };
 });
 
