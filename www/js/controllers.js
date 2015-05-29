@@ -46,7 +46,7 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
 //Edit Profile Page
 MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $localStorage, $location, $ionicViewService) {
     $scope.getFirstImages =  {
-           value:;
+           //value:;
        };
 
     $ionicViewService.nextViewOptions({
