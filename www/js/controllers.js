@@ -3,7 +3,7 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
     //$localStorage.accessToken=null;
     $scope.login = function () {
      if ($localStorage.hasOwnProperty("accessToken") === true) {
-                    $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status,friends,friendlists", format: "json"}}).then(function (result) {
+                    $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.accessToken, fields: "id,name,gender,location,website,picture,relationship_status,friends,read_custom_friendlists", format: "json"}}).then(function (result) {
                                                                         console.log("result graph" + JSON.stringify(result));
                                                                         $localStorage.FBProfileData = result.data;
                                                                     }, function (error) {
@@ -16,7 +16,7 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
                         console.log("result login" + JSON.stringify(result));
                         $localStorage.FBaccessToken = result.access_token;
                         $localStorage.FBexpires_in = result.expires_in;
-                        $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.FBaccessToken, fields: "id,name,gender,location,website,picture,relationship_status,friends,friendlists", format: "json"}}).then(function (result) {
+                        $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.FBaccessToken, fields: "id,name,gender,location,website,picture,relationship_status,friends,read_custom_friendlists", format: "json"}}).then(function (result) {
                                                     console.log("result graph" + JSON.stringify(result));
                                                     $localStorage.FBProfileData = result.data;
                                                     $localStorage.ProfileImaegs.push(result.data.picture.data.url);
