@@ -215,3 +215,16 @@ MeetApp.controller("InviteFromController", function ($scope, $cordovaOauth, $loc
         $location.path("/app/Home");
     };
 });
+
+// Proposals Page
+MeetApp.controller("ProposalsController", function ($scope, $cordovaOauth, $localStorage, $location) {
+    $scope.Accept = function () {
+        console.log("Accept");
+    };
+    $scope.ChatFrist = function () {
+        console.log("ChatFrist");
+    };
+    $scope.Reject = function () {
+        console.log("Reject");
+    };
+});

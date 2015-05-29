@@ -611,8 +611,8 @@ a.item.item-icon-left.item-icon-right.notification{
 
 .LookForInvites-page .box .LookForInvites-foot .col{  padding: 3px;}
 .LookForInvites-foot .foot-nav img.submit-small {
-  width: 45vw;
-  height: 8vw;
+    width: 45vw;
+    height: 8vw;
 }
 
 /*Invite Form*/
@@ -653,7 +653,7 @@ a.item.item-icon-left.item-icon-right.notification{
     border-width:0;
     border-color: #f0f0f0;
     background: #f0f0f0;
-      padding-top: 0px;
+    padding-top: 0px;
     overflow: none; 
     text-overflow: none; 
     font-size: 6vw;
@@ -699,25 +699,25 @@ a.item.item-icon-left.item-icon-right.notification{
     border-color: #1f1f1f;
 }
 .InviteFrom-page .share .item-content.disable-pointer-events {
-  padding-top: 6px;
+    padding-top: 6px;
 }
 .InviteFrom-foot .foot-nav{
     text-align: center !important;
 }
 .InviteFrom-foot .foot-nav img.submit-small {
-  width: 45vw;
-  height: 8vw;
+    width: 45vw;
+    height: 8vw;
 }
 
 /*Take A Picture Enrool Page*/
 .TakeAPictureEnroll-foot .foot-nav img.submit-small {
-  width: 45vw;
-  height: 8vw;
+    width: 45vw;
+    height: 8vw;
 }
 .TakeAPictureEnroll-foot.bar.bar-footer.bar-balanced{
-      border-color: #0bd5e3;
-  background-color: #0bd5e3;
-  background-image: linear-gradient(0deg, #0bd5e3, #50e0eb 50%, transparent 50%);
+    border-color: #0bd5e3;
+    background-color: #0bd5e3;
+    background-image: linear-gradient(0deg, #0bd5e3, #50e0eb 50%, transparent 50%);
 }
 
 /*Write Proposal Page*/
@@ -729,7 +729,7 @@ a.item.item-icon-left.item-icon-right.notification{
     border-width:0;
     border-color: #f0f0f0;
     background: #f0f0f0;
-      padding-top: 0px;
+    padding-top: 0px;
     overflow: none; 
     text-overflow: none; 
     font-size: 6vw;
@@ -743,11 +743,106 @@ a.item.item-icon-left.item-icon-right.notification{
     border-color: #1f1f1f;
 }
 .WriteProposal-foot .foot-nav img.submit-small {
-  width: 45vw;
-  height: 8vw;
+    width: 45vw;
+    height: 8vw;
 }
 .WriteProposal-foot.bar.bar-footer.bar-balanced{
-      border-color: #0bd5e3;
-  background-color: #0bd5e3;
-  background-image: linear-gradient(0deg, #0bd5e3, #50e0eb 50%, transparent 50%);
+    border-color: #0bd5e3;
+    background-color: #0bd5e3;
+    background-image: linear-gradient(0deg, #0bd5e3, #50e0eb 50%, transparent 50%);
+}
+
+/*Proposals Page*/
+.Proposals-page .scroll-content{
+    top: 0px !important;
+    text-align: center;
+}
+.Proposals-page .content{
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.Proposals-page .scroll-content,.Proposals-page .item{
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
+.Proposals-page .card{
+    margin:0px;
+    box-shadow:none;
+    background-color: #1f1f1f;
+}
+.Proposals-page .list:last-child.card{
+    margin:0px
+}
+.Proposals-page .list .item {
+    padding:10px;
+    padding-bottom: 0px;
+}
+.Proposals-page .list .item .left{
+    float:left;
+    padding-right: 10px;
+}
+.Proposals-page .list .item div > img:first-child{
+    width: 20vw;
+    height: 20vw;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+.Proposals-page .card .item-input{
+    padding-top:0;
+}
+
+.Proposals-page .card .right .item-input:before{
+    background-color: #158ffe;
+    right: 10px;
+    -webkit-transform: rotate(118deg) skew(-5deg);
+}
+
+.Proposals-page .item.item-input.message{
+    text-align: left;
+    white-space: normal;
+    background: #e8e8e8;
+    padding: 10px;
+    color:#000;
+    max-height: 84px;
+    overflow: hidden;
+    min-height: 84px;
+    position: relative;
+    display: block;
+}
+.Proposals-page .item.item-input.message p{
+    white-space: initial;
+    color:#000;
+}
+.Proposals-page .item.tabs.tabs-secondary.tabs-icon-left{
+    padding:10;
+}
+
+.Proposals-page .item .right:before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 76px;
+    width: 0;
+    height: 0;
+    border: 10px solid #e8e8e8;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+.Proposals-page .tab-item{
+    opacity: 1;
+}
+.Proposals-page img.submit-small {
+    width: 28vw;
+    height: 8vw;
+}
+.Proposals-page .time{
+    color:rgb(255,186,11);
+}
+.Proposals-page hr {
+    width: 80%;
+    border-top: 1px solid #000;
+    border-radius: 5px;
+    border-color: #000;
 }

@@ -107,6 +107,15 @@ MeetApp.config(function ($stateProvider, $urlRouterProvider) {
                 }
             })
             
+            .state('app.Proposals', {
+                url: "/Proposals",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/Proposals.html"
+                    }
+                }
+            })
+            
             .state('app.InviteFrom', {
                 url: "/InviteFrom",
                 views: {
