@@ -23,35 +23,6 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
                                                     pic = JSON.parse(localStorage.getItem('result'))|| [];
                                                     pic.push(result.data.picture.data.url);
                                                     console.log(pic);
-
-                                                    function convertImgToBase64(pic){
-                                                    	var canvas = document.createElement('CANVAS');
-                                                    	var ctx = canvas.getContext('2d');
-                                                    	var img = new Image;
-                                                    	img.crossOrigin = 'Anonymous';
-                                                    	img.onload = function(){
-                                                    		canvas.height = img.height;
-                                                    		canvas.width = img.width;
-                                                    	  	ctx.drawImage(img,0,0);
-                                                    	  	var dataURL = canvas.toDataURL(outputFormat || 'image/png');
-                                                    	  	callback.call(this, dataURL);
-                                                            // Clean up
-                                                    	  	canvas = null;
-                                                    	};
-                                                    	img.src = url;
-                                                    }
-
-
-                                                    $('#img2b64').submit(function(event){
-                                                        var imageUrl = $(this).find('input[name=url]').val();
-                                                        console.log('imageUrl', imageUrl);
-                                                        convertImgToBase64(imageUrl, function(base64Img){
-                                                        $localStorage.IMProfileData = base64Img;
-                                                        });
-
-                                                        event.preventDefault();
-                                                    });
-
                                                 },
                                                 function (error) {
                                                     alert("There was a problem getting your profile.  Check the logs for details.");
