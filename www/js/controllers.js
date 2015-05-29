@@ -55,7 +55,14 @@ MeetApp.controller("EditProfileController", function ($scope, $cordovaOauth, $lo
         $scope.nextEditPreferences = function () {
             $location.path("/EditPreferences");
         };
-        $
+        $scope.getFirstImages = function () {
+                   $.getJSON('$localStorage',function(data){
+                             $.each(pic, function( index, value ) {
+                                console.log( value);
+                                  $(".col item item-image thumbnail-small .pic1").append(""+value);
+                             })
+                        })
+               }
 });
 
 //Upload Images Page
