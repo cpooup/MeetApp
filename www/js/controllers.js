@@ -19,8 +19,10 @@ MeetApp.controller("LoginController", function ($scope, $cordovaOauth, $localSto
                         $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: $localStorage.FBaccessToken, fields: "id,name,gender,location,website,picture,relationship_status,friends,email", format: "json"}}).then(function (result) {
                                                     console.log("result graph" + JSON.stringify(result));
                                                     $localStorage.FBProfileData = result.data;
-                                                    $localStorage.ProfileImaegs.push(result.data.picture.data.url);
-                                                    console.log("result ProfileImaegs" + JSON.stringify($localStorage.ProfileImaegs));
+                                                    var pic;
+                                                    pic = JSON.parse(localStorage.getItem('result'));
+                                                    pic.push(result.data.picture.data.url);
+                                                    console.log(pic);
                                                 },
                                                 function (error) {
                                                     alert("There was a problem getting your profile.  Check the logs for details.");
