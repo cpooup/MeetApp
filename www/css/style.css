@@ -884,3 +884,6 @@ a.item.item-icon-left.item-icon-right.notification{
     width: 100% !important;
     height: 100% !important;
 }
+.ShareLocation-page .row.row-center.map {
+    padding-top: 5px;
+}
